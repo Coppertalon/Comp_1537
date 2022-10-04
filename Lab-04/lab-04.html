@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f1f1f1;
+        }
+
+        #nav_top1 {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        #nav_top1 a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            float: left;
+            padding: 14px 16px;
+            text-align: center;
+        }
+
+        #nav_top1 a:hover {
+            background-color: white;
+            color: #333;
+        }
+
+
+        .cards {
+            background-color: #a2b9bc;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .cards img {
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        header,
+        footer {
+            text-align: center;
+        }
+
+        section {
+            width: 70%;
+            float: left;
+        }
+
+        aside {
+            width: 30%;
+            float: right;
+            padding-left: 10px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            clear: both;
+        }
+
+        h1,
+        h2,
+        h3 {
+            margin: 0px;
+        }
+
+        @media screen and (max-width: 600px) {
+
+            section,
+            aside {
+                width: 100%;
+                padding-left: 0px;
+            }
+
+            section {}
+        }
+
+        @media screen and (max-width:300px) {
+            #nav_top1 a {
+                float: none !important;
+            }
+
+            .cards img {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>
+            Header
+        </h1>
+        <p>
+            Should be responsive
+        </p>
+    </header>
+
+    <nav id="nav_top1">
+
+        <a href="#">Link</a>
+
+
+        <a href="#">Link</a>
+
+
+        <a href="#">Link</a>
+
+
+        <a href="#" style="float: right;">Link</a>
+
+    </nav>
+
+
+    <section>
+        <div class="cards">
+            <h2>
+                Title
+            </h2>
+            <h5>
+                Title Description
+            </h5>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem modi eveniet eos dignissimos omnis
+                impedit. Voluptate, dolore aliquid obcaecati asperiores nulla accusamus libero eveniet dolores amet sed,
+                labore, repudiandae sint!
+            </p>
+        </div>
+
+        <div class="cards">
+            <h2>
+                Title
+            </h2>
+            <h5>
+                Title Description
+            </h5>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem modi eveniet eos dignissimos omnis
+                impedit. Voluptate, dolore aliquid obcaecati asperiores nulla accusamus libero eveniet dolores amet sed,
+                labore, repudiandae sint!
+            </p>
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.8n2Kr1VPo9I5HbYCBiqIewHaFj%26pid%3DApi&f=1&ipt=77fabf733f3687c6f6bc121477887ac382d2eb0567733c38e05917aababccdf1&ipo=images"
+                width="200px">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.8n2Kr1VPo9I5HbYCBiqIewHaFj%26pid%3DApi&f=1&ipt=77fabf733f3687c6f6bc121477887ac382d2eb0567733c38e05917aababccdf1&ipo=images"
+                width="200px">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.8n2Kr1VPo9I5HbYCBiqIewHaFj%26pid%3DApi&f=1&ipt=77fabf733f3687c6f6bc121477887ac382d2eb0567733c38e05917aababccdf1&ipo=images"
+                width="200px">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.8n2Kr1VPo9I5HbYCBiqIewHaFj%26pid%3DApi&f=1&ipt=77fabf733f3687c6f6bc121477887ac382d2eb0567733c38e05917aababccdf1&ipo=images"
+                width="200px">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.8n2Kr1VPo9I5HbYCBiqIewHaFj%26pid%3DApi&f=1&ipt=77fabf733f3687c6f6bc121477887ac382d2eb0567733c38e05917aababccdf1&ipo=images"
+                width="200px">
+        </div>
+
+
+    </section>
+
+    <aside>
+        <div class="cards">
+            <h2>
+                Title
+            </h2>
+            <h5>
+                Title Description
+            </h5>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem modi eveniet eos dignissimos omnis
+                impedit. Voluptate, dolore aliquid obcaecati asperiores nulla accusamus libero eveniet dolores amet sed,
+                labore, repudiandae sint!
+            </p>
+        </div>
+    </aside>
+
+    <footer>
+        <h2>
+            Footer
+        </h2>
+    </footer>
+
+
+</body>
+
+</html>
