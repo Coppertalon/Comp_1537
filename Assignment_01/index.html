@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        header {
+            padding-top: 5%;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.4;
+            height: 95%;
+        }
+
+        #left_lists {
+            float: left;
+            width: 13%;
+            height: 100%;
+        }
+
+        #main_text {
+            float: right;
+            padding-left: 1%;
+            padding-right: 1%;
+            width: 85%;
+            height: 100%;
+        }
+
+
+
+        .side_list {
+            width: 100%;
+            height: 100%;
+            padding-left: 1%;
+            padding-bottom: 5%;
+            float: left;
+            background-color: #f8f9fa;
+
+            border: 0px;
+            border-right: 1px;
+            border-style: solid;
+            border-color: lightblue;
+        }
+
+        .sidelists {
+            font-size: smaller;
+            margin: 0px;
+            padding: 0px;
+            line-height: 1.6;
+            list-style-type: none;
+            text-align: left;
+        }
+
+        #list_titles {
+            font-size: smaller;
+            color: grey;
+        }
+
+        .text_body {
+            padding-bottom: 1%;
+        }
+
+        #first_list {
+            padding-top: 70%;
+        }
+
+        #last_list {
+            padding-bottom: 20%;
+        }
+
+        .image_box {
+
+            width: 22%;
+            float: right;
+            border-radius: 1px;
+            border-style: solid;
+            margin-top: 2%;
+            margin-left: 1.5%;
+            padding: 4px;
+            text-align: center;
+
+
+        }
+
+        #main_img_txt {
+            background-color: #f8de7e;
+            font-weight: bold;
+        }
+
+        #secondary_img_txt {
+            font-size: smaller;
+        }
+
+
+
+
+        .titles {
+            padding-top: 1%;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 500;
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+        }
+
+        #main_title {
+            padding-top: 0px;
+            margin-top: 0px;
+
+        }
+
+        #source {
+            font-size: smaller;
+            padding-bottom: 2%;
+        }
+
+        #see_also {
+            font-style: italic;
+        }
+
+        .sub-head {
+            font-weight: bold;
+        }
+
+        #external_links {
+
+            line-height: 1.6;
+        }
+
+        @media screen and (max-width: 600px) {
+
+            #left_lists {
+                float: left;
+                width: 30%;
+                height: 100%;
+            }
+
+            #main_text {
+                float: right;
+                padding-left: 2%;
+                padding-right: 1%;
+                width: 70%;
+                height: 100%;
+            }
+
+            .image_box {
+                width: 100%;
+                border-radius: 1px;
+                border-style: solid;
+                margin-top: 0px;
+                padding: 4px;
+                text-align: center;
+            }
+
+            .sidelists {
+                font-size: smaller;
+                margin: 0px;
+                padding: 0px;
+                line-height: 2;
+                list-style-type: none;
+                text-align: left;
+            }
+
+            #external_links {
+
+                line-height: 2;
+            }
+        }
+
+        @media screen and (max-width:300px) {
+            #left_lists {
+                float: left;
+                width: 35%;
+                height: 100%;
+            }
+
+            #main_text {
+                float: right;
+                padding-left: 2%;
+                padding-right: 1%;
+                width: 65%;
+                height: 100%;
+            }
+
+            .image_box {
+                width: 100%;
+                border-radius: 1px;
+                border-style: solid;
+                margin: 0px;
+                padding: 4px;
+                text-align: center;
+            }
+
+            .sidelists {
+                font-size: smaller;
+                margin: 0px;
+                padding: 0px;
+                line-height: 2;
+                list-style-type: none;
+                text-align: left;
+            }
+
+            #external_links {
+
+                line-height: 2;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <header></header>
+    <div id="left_lists">
+        <div class="side_list" id="first_list">
+            <ul class="sidelists">
+                <li>Main Page</li>
+                <li>Contents</li>
+                <li>Current Events</li>
+                <li>Random Article</li>
+                <li>About Wikipedia</li>
+                <li>Contact Us</li>
+                <li>Donate</li>
+            </ul>
+        </div>
+        <div class="side_list">
+            <p id="list_titles">Contribute</p>
+            <hr size="1px" width="90%" color="lightgrey">
+            <ul class="sidelists">
+                <li>Help</li>
+                <li>Learn to Edit</li>
+                <li>Community Portal</li>
+                <li>Recent Changes</li>
+                <li>Upload File</li>
+            </ul>
+        </div>
+
+        <div class="side_list">
+            <p id="list_titles">Tools</p>
+            <hr size="1px" width="90%" color="lightgrey">
+            <ul class="sidelists">
+                <li>What Links Here</li>
+                <li>Related Changes</li>
+                <li>Special Pages</li>
+                <li>Permanent Link</li>
+                <li>Page Information</li>
+                <li>Cite this Page</li>
+                <li>Wikipedia Item</li>
+            </ul>
+        </div>
+
+        <div class="side_list" id="last_list">
+            <p id="list_titles">Print/Export</p>
+            <hr size="1px" width="90%" color="lightgrey">
+            <ul class="sidelists">
+                <li>Download as PDF</li>
+                <li>Printable Version</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="main_text">
+        <div class="text_body">
+            <h1 class="titles" id="main_title">
+                Leonardo da Vinci
+            </h1>
+            <hr size="1px" width="100%" color="lightgrey">
+            <p id="source">
+                From Wikipedia, the free encylopedia
+            </p>
+
+
+
+
+
+            <p id="first_para">
+
+                Leonardo di ser Piero da Vinci[b] (15 April 1452 – 2 May 1519) was an Italian polymath of the High
+                Renaissance
+                who was
+                active as a painter, draughtsman, engineer, scientist, theorist, sculptor, and architect.[3] While his
+                fame
+                initially
+                rested on his achievements as a painter, he also became known for his notebooks, in which he made
+                drawings
+                and
+                notes on
+                a variety of subjects, including anatomy, astronomy, botany, cartography, painting, and paleontology.
+                Leonardo
+                is widely
+                regarded to have been a genius who epitomized the Renaissance humanist ideal,[4] and his collective
+                works
+                comprise a
+                contribution to later generations of artists matched only by that of his younger contemporary,
+                Michelangelo.[3][4]
+            </p>
+            <p class="image_box">
+                <span id="main_img_txt">Leonardo Da
+                    Vinci</span>
+                <img width=100%
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Francesco_Melzi_-_Portrait_of_Leonardo.png/440px-Francesco_Melzi_-_Portrait_of_Leonardo.png"
+                    alt="Leonardo Image">
+                <span id="secondary_img_txt">
+                    This portrait attributed to Francesco Melzi</span>
+            </p>
+            <p>
+                Born out of wedlock to a successful notary and a lower-class woman in, or near, Vinci, he was educated
+                in
+                Florence by
+                the Italian painter and sculptor Andrea del Verrocchio. He began his career in the city, but then spent
+                much
+                time in the
+                service of Ludovico Sforza in Milan. Later, he worked in Florence and Milan again, as well as briefly in
+                Rome,
+                all while
+                attracting a large following of imitators and students. Upon the invitation of Francis I, he spent his
+                last
+                three years
+                in France, where he died in 1519. Since his death, there has not been a time where his achievements,
+                diverse
+                interests,
+                personal life, and empirical thinking have failed to incite interest and admiration,[3][4] making him a
+                frequent
+                namesake and subject in culture.
+            </p>
+
+            <p>
+                Leonardo is identified as one of the greatest painters in the history of art and is often credited as
+                the
+                founder of the
+                High Renaissance.[3] Despite having many lost works and less than 25 attributed major works—including
+                numerous
+                unfinished works—he created some of the most influential paintings in Western art.[3] His magnum opus,
+                the
+                Mona
+                Lisa, is
+                his best known work and often regarded as the world's most famous painting. The Last Supper is the most
+                reproduced
+                religious painting of all time and his Vitruvian Man drawing is also regarded as a cultural icon. In
+                2017,
+                Salvator
+                Mundi, attributed in whole or part to Leonardo,[5] was sold at auction for US$450.3 million, setting a
+                new
+                record for
+                the most expensive painting ever sold at public auction.
+            </p>
+        </div>
+        <div class="text_body">
+            <h2 class="titles">
+                Personal Life
+            </h2>
+            <hr size="0.5px" width="100%" color="lightgrey">
+            <p id="see_also">
+                &nbsp;&nbsp;&nbsp;&nbsp;Main article: Personal life of Leonardo da Vinci
+            </p>
+            <p>
+                Despite the thousands of pages Leonardo left in notebooks and manuscripts, he scarcely made reference to
+                his
+                personal
+                life.[2]
+            </p>
+            <p>
+                Within Leonardo's lifetime, his extraordinary powers of invention, his "great physical beauty" and
+                "infinite
+                grace," as
+                described by Vasari,[‡ 5] as well as all other aspects of his life, attracted the curiosity of others.
+                One
+                such
+                aspect
+                was his love for animals, likely including vegetarianism and according to Vasari, a habit of purchasing
+                caged
+                birds and
+                releasing them.[99][‡ 6]
+            </p>
+            <p>
+                Leonardo had many friends who are now notable either in their fields or for their historical
+                significance,
+                including
+                mathematician Luca Pacioli,[100] with whom he collaborated on the book Divina proportione in the 1490s.
+                Leonardo
+                appears
+                to have had no close relationships with women except for his friendship with Cecilia Gallerani and the
+                two
+                Este
+                sisters,
+                Beatrice and Isabella.[101] While on a journey that took him through Mantua, he drew a portrait of
+                Isabella
+                that
+                appears
+                to have been used to create a painted portrait, now lost.[37]
+            </p>
+            <p>
+                Beyond friendship, Leonardo kept his private life secret. His sexuality has been the subject of satire,
+                analysis, and
+                speculation. This trend began in the mid-16th century and was revived in the 19th and 20th centuries,
+                most
+                notably by
+                Sigmund Freud in his Leonardo da Vinci, A Memory of His Childhood.[102] Leonardo's most intimate
+                relationships
+                were
+                perhaps with his pupils Salaì and Melzi. Melzi, writing to inform Leonardo's brothers of his death,
+                described
+                Leonardo's
+                feelings for his pupils as both loving and passionate. It has been claimed since the 16th century that
+                these
+                relationships were of a sexual or erotic nature. Court records of 1476, when he was aged twenty-four,
+                show
+                that
+                Leonardo
+                and three other young men were charged with sodomy in an incident involving a well-known male
+                prostitute.
+                The
+                charges
+                were dismissed for lack of evidence, and there is speculation that since one of the accused, Lionardo de
+                Tornabuoni, was
+                related to Lorenzo de' Medici, the family exerted its influence to secure the dismissal.[103] Since that
+                date
+                much has
+                been written about his presumed homosexuality[104] and its role in his art, particularly in the
+                androgyny
+                and
+                eroticism
+                manifested in Saint John the Baptist and Bacchus and more explicitly in a number of erotic
+                drawings.[105][98]
+            </p>
+        </div>
+        <div class="text_body" id="external_links">
+            <h2 class="titles">
+                External Links
+            </h2>
+            <hr size="0.5px" width="100%" color="lightgrey">
+            <p class="sub-head">General</p>
+            <ul>
+                <li>
+                    Universal Leonardo, a database of Leonardo's life and works maintained by Martin Kemp and Marina
+                    Wallace
+                </li>
+                <li>
+                    Leonardo da Vinci on the National Gallery website
+                </li>
+            </ul>
+            <p class="sub-head">Works</p>
+            <ul>
+                <li>
+                    Biblioteca Leonardiana, online bibliography (in Italian)
+                </li>
+                <li>
+                    e-Leo: Archivio digitale di storia della tecnica e della scienza, archive of drawings, notes and
+                    manuscripts
+                </li>
+                <li>
+                    Works by Leonardo da Vinci at Project Gutenberg
+                </li>
+                <li>
+                    Works by Leonardo da Vinci at LibriVox (public domain audiobooks)
+                </li>
+                <li>
+                    Complete text and images of Richter's translation of the Notebooks
+                </li>
+                <li>
+                    The Notebooks of Leonardo da Vincis
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</body>
+
+</html>
