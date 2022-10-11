@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f1f1f1;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        #nav_top1 {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        #nav_top1 a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            float: left;
+            padding: 14px 16px;
+            text-align: center;
+        }
+
+        #nav_top1 a:hover {
+            background-color: white;
+            color: #333;
+        }
+
+        #img_contain {
+            float: left;
+            width: 98%;
+            padding: 1%;
+
+        }
+
+        #img_contain img {
+            width: 30%;
+            border-radius: 5px;
+            margin: 1.5%;
+        }
+
+        p {
+            text-align: center;
+        }
+
+
+
+        @media screen and (max-width: 600px) {
+            #img_contain img {
+                width: 95%;
+                border-radius: 5px;
+                margin: 2.5%;
+            }
+        }
+
+        @media screen and (max-width:300px) {
+            #nav_top1 a {
+                float: none !important;
+            }
+
+            #img_contain img {
+                width: 95%;
+                border-radius: 5px;
+                margin: 2.5%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>
+            Header
+        </h1>
+        <p>
+            Should be responsive
+        </p>
+    </header>
+
+    <nav id="nav_top1">
+
+        <a href="#">Link</a>
+
+
+        <a href="#">Link</a>
+
+
+        <a href="#">Link</a>
+
+
+        <a href="#" style="float: right;">Link</a>
+
+    </nav>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas mollitia officia ipsa quasi corporis, alias et. Id
+        deleniti corporis nesciunt corrupti eveniet ipsum odio vitae eum, ex voluptatibus vero necessitatibus?</p>
+    <div id="img_contain">
+        <img src="https://picsum.photos/536/354" alt="">
+        <img src="https://picsum.photos/536/355" alt="">
+        <img src="https://picsum.photos/536/356" alt="">
+    </div>
+
+</body>
+
+</html>
