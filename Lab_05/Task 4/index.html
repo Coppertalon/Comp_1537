@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f1f1f1;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        #nav_top1 {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        #nav_top1 a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            float: left;
+            padding: 14px 16px;
+            text-align: center;
+        }
+
+        #nav_top1 a:hover {
+            background-color: white;
+            color: #333;
+        }
+
+        @media screen and (max-width: 600px) {}
+
+        @media screen and (max-width:300px) {}
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script>
+        function compute_leap_year() {
+            year = $("#year").val()
+            if (year % 4 != 0) {
+                $("#result").html("Not a leap year")
+            } else if (year % 100 != 0) {
+                $("#result").html("A leap year")
+            } else if (year % 400 != 0) {
+                $("#result").html("Not a leap year")
+            } else {
+                $("#result").html("A leap year")
+            }
+        }
+        function setup() {
+            $("#compute_leap_year").click(compute_leap_year)
+        }
+        $(document).ready(setup)
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>
+            Header
+        </h1>
+        <p>
+            Should be responsive
+        </p>
+    </header>
+
+    <nav id="nav_top1">
+
+        <a href="#">Link</a>
+
+
+        <a href="#">Link</a>
+
+
+        <a href="#">Link</a>
+
+
+        <a href="#" style="float: right;">Link</a>
+
+    </nav>
+
+    please enter the year to check: <input type="text" id="year">
+    <input type="submit" value="click me" id="compute_leap_year">
+    <p id="result"></p>
+
+
+</body>
+
+</html>
