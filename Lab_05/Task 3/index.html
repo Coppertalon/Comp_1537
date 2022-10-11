@@ -40,14 +40,21 @@
             color: #333;
         }
 
-
-
-
-
         @media screen and (max-width: 600px) {}
 
         @media screen and (max-width:300px) {}
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script>
+        function compute_button_handel() {
+            r = $("#radius").val()
+            jQuery("#result").html("<br>" + r * r * Math.PI)
+        }
+        function setup() {
+            jQuery("#compute_button").click(compute_button_handel)
+        }
+        jQuery(document).ready(setup)
+    </script>
 </head>
 
 <body>
@@ -74,6 +81,9 @@
         <a href="#" style="float: right;">Link</a>
 
     </nav>
+    please enter the radius of the circle: <input type="text" id="radius">
+    <input type="submit" value="click me" id="compute_button">
+    <p id="result"></p>
 
 
 </body>
