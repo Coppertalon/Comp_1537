@@ -46,22 +46,20 @@
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
     <script>
-        function compute_leap_year() {
-            year = $("#year").val()
-            if (year % 4 != 0) {
-                $("#result").html("Not a leap year")
-            } else if (year % 100 != 0) {
-                $("#result").html("A leap year")
-            } else if (year % 400 != 0) {
-                $("#result").html("Not a leap year")
-            } else {
-                $("#result").html("A leap year")
-            }
+        function use_code() {
+            result = ""
+            for (let i = 0; i < 5; i++) {
+                for (let j = i; j < 5; j++) {
+                    result = result + "*"
+                }
+                result = result + <br>
+           }
         }
-        function setup() {
-            $("#compute_leap_year").click(compute_leap_year)
-        }
-        $(document).ready(setup)
+
+                    function setup() {
+                        $("#use_code").click(use_code)
+                    }
+                    $(document).ready(setup)
     </script>
 </head>
 
@@ -90,8 +88,7 @@
 
     </nav>
 
-    please enter the year to check: <input type="text" id="year">
-    <input type="submit" value="click me" id="compute_leap_year">
+    <input type="submit" value="click me" id="use_code">
     <p id="result"></p>
 
 
