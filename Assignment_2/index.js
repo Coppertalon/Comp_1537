@@ -31,6 +31,7 @@ const display = function () {
     });
 }
 
+
 function get_movie() {
     movie_name = $("#search_term").val()
     console.log(movie_name)
@@ -67,6 +68,7 @@ function set_page_rel() {
     }
     display();
 }
+
 
 setup = function () {
 
