@@ -20,6 +20,7 @@ const display = function () {
             num_pages = Math.ceil(data.results.length / pageSize)
 
             for (i = startIndex; i < stopIndex; i++) {
+                console.log(data.results.length)
                 if (i < data.results.length) {
                     $("#movies").append(`<div>
                         ${data.results[i].title}
@@ -93,6 +94,7 @@ function set_page_rel() {
 
 setup = function () {
     $("select").change(() => {
+        currentPage = 1
         pageSize = Number($("select option:selected").val())
         display();
     })
