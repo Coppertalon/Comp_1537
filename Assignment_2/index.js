@@ -15,7 +15,7 @@ const display = function () {
             const startIndex = (currentPage - 1) * pageSize
             const stopIndex = startIndex + pageSize
             num_pages = Math.ceil(data.results.length / pageSize)
-
+            console.log(num_pages)
             for (i = startIndex; i < stopIndex; i++) {
                 if (i < data.results.length) {
                     $("#movies").append(
@@ -51,18 +51,21 @@ const display = function () {
 function get_movie() {
 
     movie_name = $("#search_term").val()
+    console.log(movie_name)
     currentPage = 1
     display();
 }
 
 function set_page_num() {
-
+    $("#previous").html(`<button id="previous" class="rel_page_btn">Prev.</button>`)
+    $("#next").html(`<button id="next" class="rel_page_btn">Next</button>`)
     currentPage = $(this).attr('id')
     display();
 }
 
 function set_page_rel() {
-
+    $("#previous").html(`<button id="previous" class="rel_page_btn">Prev.</button>`)
+    $("#next").html(`<button id="next" class="rel_page_btn">Next</button>`)
     let set_page = $(this).attr('id')
     if (set_page == "first") {
         currentPage = 1
@@ -83,6 +86,7 @@ function set_page_rel() {
         }
     }
     display();
+    console.log(currentPage)
 }
 
 
