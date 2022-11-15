@@ -4,6 +4,7 @@ var movie_name = "up";
 
 const display = function () {
     $("#movies").empty();
+    $("#page_title").html(`<h2 id = "page_num_display"> ${currentPage} </h2>`);
     $.ajax({
         url: `https://api.themoviedb.org/3/search/movie?api_key=749fd9ec1724adbbd9cfe5563fade508&language=en-US&page=1&include_adult=false&query=${movie_name}`,
         type: "GET",
@@ -76,7 +77,6 @@ setup = function () {
         pageSize = Number($("select option:selected").val())
         display();
     })
-
     display();
 
     $("body").on("click", ".img_but", function () {
