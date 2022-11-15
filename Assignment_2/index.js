@@ -93,6 +93,9 @@ function set_page_rel() {
 
 
 setup = function () {
+    document.getElementById("page_size").selectedIndex = "0";
+    pageSize = 3
+
     $("select").change(() => {
         currentPage = 1
         pageSize = Number($("select option:selected").val())
