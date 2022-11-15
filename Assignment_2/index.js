@@ -36,7 +36,7 @@ const display = function () {
                 }
             };
 
-            for (j = 1; j <= pages; j++) {
+            for (j = 1; j <= num_pages; j++) {
                 $("#page_numbers").append(`<button id="${j}" class="num_page_btn">${j}</button>`);
             };
 
@@ -46,6 +46,7 @@ const display = function () {
 
 
 function get_movie() {
+    $("#buttons").css("visibility", "visible")
     movie_name = $("#search_term").val()
     currentPage = 1
     display();
@@ -71,12 +72,12 @@ function set_page_rel() {
         currentPage = 1
     }
     if (set_page == "last") {
-        currentPage = 7
+        currentPage = num_pages
     }
     if (set_page == "next") {
         currentPage += 1
-        if (currentPage > 7) {
-            currentPage = 7
+        if (currentPage > num_pages) {
+            currentPage = num_pages
         }
     }
     if (set_page == "previous") {
