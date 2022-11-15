@@ -1,9 +1,12 @@
 var pageSize = 3;
 var currentPage = 1;
-var movie_name = "up";
+var movie_name = "avengers";
+var num_pages = null
 
 const display = function () {
+
     $("#movies").empty();
+    $("#page_numbers").empty();
     $("#page_title").html(`<h2 id = "page_num_display"> ${currentPage} </h2>`);
     $.ajax({
         url: `https://api.themoviedb.org/3/search/movie?api_key=749fd9ec1724adbbd9cfe5563fade508&language=en-US&page=1&include_adult=false&query=${movie_name}`,
@@ -11,10 +14,12 @@ const display = function () {
         success: function (data) {
             const startIndex = (currentPage - 1) * pageSize
             const stopIndex = startIndex + pageSize
-            for (i = startIndex; i < stopIndex; i++) {
+            num_pages = Math.ceil(data.results.length / pageSize)
 
-                $("#movies").append(
-                    `
+            for (i = startIndex; i < stopIndex; i++) {
+                if (i < data.results.length) {
+                    $("#movies").append(
+                        `
                     <div>
                         ${data.results[i].title}
                         <p>
@@ -25,6 +30,16 @@ const display = function () {
                         <hr>
                     </div>
                     `
+                    );
+                }
+            };
+
+            for (j = 1; j <= pages; j++) {
+
+                $("#page_numbers").append(
+                    `
+                    <button id="${j}" class="num_page_btn">${j}</button>
+                    `
                 );
 
             };
@@ -34,21 +49,21 @@ const display = function () {
 
 
 function get_movie() {
+
     movie_name = $("#search_term").val()
-    console.log(movie_name)
     currentPage = 1
     display();
 }
 
 function set_page_num() {
+
     currentPage = $(this).attr('id')
-    console.log(movie_name)
     display();
 }
 
 function set_page_rel() {
+
     let set_page = $(this).attr('id')
-    console.log(set_page)
     if (set_page == "first") {
         currentPage = 1
     }
@@ -72,6 +87,7 @@ function set_page_rel() {
 
 
 setup = function () {
+
 
     $("select").change(() => {
         pageSize = Number($("select option:selected").val())
