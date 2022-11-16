@@ -29,7 +29,7 @@ const display = function () {
                             ${data.results[i].overview}
                         </p>
 
-                        <img src = "https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" </img>
+                        <img id= "small_img" src = "https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}"> </img>
                         <button backdropPath = "${data.results[i].backdrop_path}" class = "img_but" >Get Image</button>
                         <hr>
 
@@ -105,8 +105,6 @@ setup = function () {
     $("body").on("click", ".img_but", function () {
         $("aside").html(`<img src ="https://image.tmdb.org/t/p/w500/${$(this).attr("backdropPath")}">`)
     })
-
-    display();
 
     $("#search_btn").click(get_movie);
 
