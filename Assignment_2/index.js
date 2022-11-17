@@ -20,13 +20,15 @@ const display = function () {
             num_pages = Math.ceil(data.results.length / pageSize)
 
             for (i = startIndex; i < stopIndex; i++) {
-                console.log(data.results.length)
+
                 if (i < data.results.length) {
                     $("#movies").append(`<div>
-                        ${data.results[i].title}
+                        #${i + 1}
+                        <br>
+                        Title:${data.results[i].title}
 
                         <p>
-                            ${data.results[i].overview}
+                            Description: ${data.results[i].overview}
                         </p>
 
                         <img id= "small_img" src = "https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}"> </img>
@@ -97,8 +99,10 @@ setup = function () {
     pageSize = 3
 
     $("select").change(() => {
-        currentPage = 1
         pageSize = Number($("select option:selected").val())
+        if (currentPage > (20 / pageSize)) {
+            currentPage = 1
+        }
         display();
     })
 
