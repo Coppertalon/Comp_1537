@@ -53,4 +53,26 @@ app.post('/getUnicornsByNameRoute', (req, res) => {
     });
 });
 
+app.use(express.urlencoded());
+app.use(express.json());
+app.post('/getUnicornsByWeightRoute', (req, res) => {
+    console.log(req.body);
+    unicornModel.find({ weight: { $gt: req.body.unicornLowWeightInHTTPBody }, weight: { $lt: req.body.unicornHighWeightInHTTPBody } }, (err, data) => {
+        if (err) console.log(err);
+        res.send(data);
+    });
+});
+
+app.use(express.urlencoded());
+app.use(express.json());
+app.post('/getUnicornsByLovesRoute', (req, res) => {
+    console.log(req.body);
+    unicornModel.find({ loves: { $all: req.body.unicornLoveFood } }, (err, data) => {
+        if (err) console.log(err);
+        res.send(data);
+    });
+});
+
+
+
 app.use(express.static('./public'));
