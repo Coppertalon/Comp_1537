@@ -6,7 +6,7 @@ function setup() {
         let gender = $("select option:selected").val()
         if (gender === "Male") {
             $.ajax({
-                url: "http://localhost:5000/getUnicornsGender",
+                url: "http://localhost:5000/getUnicornsByGender",
                 type: "POST",
                 data: {
                     "unicornGender":
@@ -22,7 +22,7 @@ function setup() {
 
         if (gender === "Female") {
             $.ajax({
-                url: "http://localhost:5000/getUnicornsGender",
+                url: "http://localhost:5000/getUnicornsByGender",
                 type: "POST",
                 data: {
                     "unicornGender":
