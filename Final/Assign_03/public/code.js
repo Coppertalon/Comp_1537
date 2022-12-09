@@ -3,13 +3,15 @@ var receivedArray = []
 function populate_Data() { // remove a ingredient from the array
     unicornName = jQuery(this).attr('id')
     vampires = receivedArray[unicornName].vampires
-    console.log(vampires)
+
     if (receivedArray[unicornName].gender === "m") {
         useGender = "Male"
     }
     if (receivedArray[unicornName].gender === "f") {
         useGender = "Female"
     }
+
+
     if ($(`#${receivedArray[unicornName].name}`).html() == "") {
         $(`#${receivedArray[unicornName].name}`).append(`
         <ul>
@@ -19,6 +21,7 @@ function populate_Data() { // remove a ingredient from the array
             <li>gender: ${useGender}</li>
         </ul>
         `)
+
 
         if (receivedArray[unicornName].vampires > 1) {
             $(`#${receivedArray[unicornName].name}`).append(`
