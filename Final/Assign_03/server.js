@@ -45,9 +45,9 @@ app.get('/unicorns', (req, res) => {
 
 app.use(express.urlencoded());
 app.use(express.json());
-app.post('/getUnicornsByNameRoute', (req, res) => {
+app.post('/getUnicornsByMale', (req, res) => {
     console.log(req.body);
-    unicornModel.find({ name: req.body.unicornNameInHTTPBody }, (err, data) => {
+    unicornModel.find({ gender: "m" }, (err, data) => {
         if (err) console.log(err);
         res.send(data);
     });
@@ -55,24 +55,12 @@ app.post('/getUnicornsByNameRoute', (req, res) => {
 
 app.use(express.urlencoded());
 app.use(express.json());
-app.post('/getUnicornsByWeightRoute', (req, res) => {
+app.post('/getUnicornsByFemale', (req, res) => {
     console.log(req.body);
-    unicornModel.find({ weight: { $gt: req.body.unicornLowWeightInHTTPBody }, weight: { $lt: req.body.unicornHighWeightInHTTPBody } }, (err, data) => {
+    unicornModel.find({ gender: "m" }, (err, data) => {
         if (err) console.log(err);
         res.send(data);
     });
 });
-
-app.use(express.urlencoded());
-app.use(express.json());
-app.post('/getUnicornsByLovesRoute', (req, res) => {
-    console.log(req.body);
-    unicornModel.find({ loves: { $all: req.body.unicornLoveFood } }, (err, data) => {
-        if (err) console.log(err);
-        res.send(data);
-    });
-});
-
-
 
 app.use(express.static('./public'));
