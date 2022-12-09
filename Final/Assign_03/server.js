@@ -43,21 +43,12 @@ app.get('/unicorns', (req, res) => {
     });
 });
 
-app.use(express.urlencoded());
-app.use(express.json());
-app.post('/getUnicornsByMale', (req, res) => {
-    console.log(req.body);
-    unicornModel.find({ gender: "m" }, (err, data) => {
-        if (err) console.log(err);
-        res.send(data);
-    });
-});
 
 app.use(express.urlencoded());
 app.use(express.json());
-app.post('/getUnicornsByFemale', (req, res) => {
+app.post('/getUnicornsByGender', (req, res) => {
     console.log(req.body);
-    unicornModel.find({ gender: "m" }, (err, data) => {
+    unicornModel.find({ gender: req.body.unicornGender }, (err, data) => {
         if (err) console.log(err);
         res.send(data);
     });
