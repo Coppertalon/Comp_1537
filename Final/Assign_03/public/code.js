@@ -1,4 +1,16 @@
 var receivedArray = []
+
+function populate_Data() { // remove a ingredient from the array
+    unicornName = jQuery(this).attr('id')
+    if ($(`#${receivedArray[unicornName].name}`).html() == "") {
+        $(`#${receivedArray[unicornName].name}`).append("test")
+    }
+    else if ($(`#${receivedArray[unicornName].name}`).html() != "") {
+        $(`#${receivedArray[unicornName].name}`).html("")
+    }
+
+}
+
 function setup() {
 
 
@@ -13,9 +25,20 @@ function setup() {
                         "m"
                 },
                 success: function (data) {
-                    receivedArray = data
+                    $("#result").html("")
 
-                    $("#result").html(JSON.stringify(data));
+                    receivedArray = data
+                    for (let i = 0; i < receivedArray.length; i++) {
+                        $("#result").append(`
+                        ${receivedArray[i].name}
+                        <br>
+                        <button class="unicorn" id="${i}">
+                            Show Details
+                        </button>
+                        <br><br>
+                        <div id=${receivedArray[i].name}></div>
+                                            `)
+                    }
                 }
             });
         }
@@ -29,14 +52,24 @@ function setup() {
                         "f"
                 },
                 success: function (data) {
+                    $("#result").html("")
                     receivedArray = data
-
-                    $("#result").html(JSON.stringify(data));
+                    for (let i = 0; i < receivedArray.length; i++) {
+                        $("#result").append(`
+                        ${receivedArray[i].name}
+                        <br>
+                        <button class="unicorn" id="${i}">
+                            Show Details
+                        </button>
+                        <br><br>
+                        <div id=${receivedArray[i].name}></div>
+                                            `)
+                    }
                 }
             });
         }
     })
-
+    $("body").on("click", ".unicorn", populate_Data);
 }
 
 $(document).ready(setup)
